@@ -30,11 +30,12 @@ div.part1 {
 div.part1 div.part1-text h5 {
   color: #ff6bb1;
   padding-left: 20px;
+  font-family: "Futara" sans-serif;
 }
 
 div.part1 div.part1-text h4 {
   color: black;
-  font-family: 'Futara' sans-serif;
+  font-family: "Futara" sans-serif;
   font-weight: bold;
   font-size: 22pt;
   padding-left: 20px;
@@ -43,12 +44,12 @@ div.part1 div.part1-text h4 {
 }
 
 div.part1 div.part1-text p {
-  font-family: 'Futara' sans-serif;
+  color: #464545;
+  font-family: "Futara" sans-serif;
   font-weight: lighter;
-  font-size: 15pt;
+  font-size: 14pt;
+  line-height: 25px;
   padding-left: 20px;
-  line-height: 30px;
-  color: #aaaaaa;
 }
 
 div.part1 div.part1-8 img {
@@ -74,7 +75,7 @@ div.part2 h4 {
   width: 300px;
   color: black;
   font-size: 22pt;
-  font-family: 'Futara' sans-serif;
+  font-family: "Futara" sans-serif;
   padding-top: 80px;
   padding-left: 20px;
   margin: 0;
@@ -85,10 +86,115 @@ div.part2 p {
   width: 300px;
   color: black;
   font-size: 15pt;
-  font-family: 'Futara' sans-serif;
+  font-family: "Futara" sans-serif;
   padding-top: 5px;
   padding-left: 20px;
   padding-bottom: 20px;
   line-height: 30px;
+}
+
+div.part3-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+div.part3-logo img:nth-child(4) {
+  display: none;
+}
+
+div.part3-logo img {
+  width: 120px;
+  padding: 20px;
+}
+
+div.part4-pic h4 {
+  width: 300px;
+  color: black;
+  font-size: 22pt;
+  font-family: "Futara" sans-serif;
+  padding-top: 80px;
+  padding-left: 20px;
+  margin: 0;
+  line-height: 30px;
+}
+
+div.part4-pic p {
+  width: 300px;
+  color: black;
+  font-size: 14pt;
+  font-family: "Futara" sans-serif;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+div.part5 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+div.part5 h5 {
+  color: #ff6bb1;
+  padding-left: 20px;
+}
+
+div.part5 h4 {
+  width: 200px;
+  color: black;
+  font-size: 30pt;
+  font-family: "Futara" sans-serif;
+  padding-left: 20px;
+  margin: 0;
+  line-height: 30px;
+}
+
+div.part5 p {
+  color: #464545;
+  font-family: "Futara" sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  line-height: 25px;
+  padding-left: 20px;
+}
+
+div.part5 input {
+  border: 3px solid pink;
+  background-color: transparent;
+  border-radius: 35px;
+  padding: 15px 40px;
+  margin: 15px;
+}
+
+div.part5 img {
+  width: 150px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+footer .footer-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+footer .about, footer .NFT, footer .contact, footer .Social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */
