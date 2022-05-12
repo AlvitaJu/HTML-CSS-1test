@@ -13,7 +13,6 @@ header {
 
 header nav a {
   display: none;
-  color: #c4c4c4;
 }
 
 header nav img {
@@ -151,6 +150,54 @@ div.part4-pic p {
   width: 300px;
 }
 
+div.pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+div.pictures > .nft {
+  width: 290px;
+  margin: 20px;
+  background-color: #eeeeee;
+  border-radius: 16px;
+}
+
+div.pictures .line1,
+div.pictures .line2,
+div.pictures .line3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+div.pictures .line1 .gloop {
+  color: #ff8039;
+  font-size: 12pt;
+}
+
+div.pictures .line1 .bid,
+div.pictures .line3 p {
+  color: #777777;
+  font-size: 12pt;
+}
+
+div.pictures .line2 p {
+  font-size: 16pt;
+}
+
+div.pictures p img {
+  padding-right: 2px;
+}
+
 div.part5 {
   display: -ms-grid;
   display: grid;
@@ -175,7 +222,7 @@ div.part5 h4 {
   padding-left: 20px;
   line-height: 1.1;
   margin: 0;
-  width: 200px;
+  width: 170px;
 }
 
 div.part5 p {
@@ -198,9 +245,9 @@ div.part5 input {
 }
 
 div.part5 img {
-  width: 130px;
+  width: 150px;
   padding: 40px;
-  margin-top: 30px;
+  margin-top: 110px;
 }
 
 footer {
@@ -229,12 +276,28 @@ footer .Social {
 
 footer a,
 footer i,
-footer h2 {
+footer h2,
+footer h3 {
   text-decoration: none;
   padding: 5px;
-  color: #464545;
+  color: #777777;
   font-family: "inter" sans-serif;
   font-size: 12pt;
+}
+
+.footer {
+  color: #777777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 0;
+}
+
+.footer #none {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -270,85 +333,34 @@ footer h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
   }
   div.part3-logo img:nth-child(4) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  div.part3-logo img {
-    width: 110px;
-    padding: 20px;
-  }
   div.part4-pic h4 {
-    color: black;
-    font-family: "inter" sans-serif;
-    font-size: 24pt;
-    padding-left: 20px;
-    line-height: 1.1;
-    margin: 0;
-    font-weight: lighter;
-    width: 300px;
-    padding-top: 40px;
+    width: 600px;
   }
   div.part4-pic p {
-    color: #464545;
-    font-family: "inter" sans-serif;
-    font-weight: lighter;
-    font-size: 14pt;
-    line-height: 1.2;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    width: 300px;
-  }
-  div.part5 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  div.part5 h5 {
-    color: #ff6bb1;
-    padding-left: 20px;
-    font-family: "inter" sans-serif;
-    font-size: 9pt;
-    letter-spacing: 1px;
-    font-weight: bold;
-    padding-top: 70px;
+    width: 800px;
   }
   div.part5 h4 {
-    color: black;
-    font-family: "inter" sans-serif;
-    font-size: 24pt;
-    padding-left: 20px;
-    line-height: 1.1;
-    margin: 0;
-    width: 200px;
+    width: 700px;
   }
   div.part5 p {
-    color: #464545;
-    font-family: "inter" sans-serif;
-    font-weight: lighter;
-    font-size: 14pt;
-    line-height: 1.2;
-    padding-left: 20px;
-    padding-bottom: 20px;
-  }
-  div.part5 input {
-    border: 3px solid #ff4969;
-    background-color: transparent;
-    border-radius: 35px;
-    padding: 15px 40px;
-    margin-left: 20px;
-    margin-bottom: 40px;
+    width: 600px;
   }
   div.part5 img {
     width: 130px;
     padding: 40px;
     margin-top: 30px;
   }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
