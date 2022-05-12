@@ -1,21 +1,50 @@
 @mixin stilius_p {
   color: rgb(70, 69, 69);
-  font-family: "Futara" sans-serif;
+  font-family: "inter" sans-serif;
   font-weight: lighter;
   font-size: 14pt;
-  line-height: 25px;
+  line-height: 1.2;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 @mixin stilius_h5 {
   color: rgb(255, 107, 177);
   padding-left: 20px;
-  font-family: "Futara" sans-serif;
-  font-size: 22pt;
+  font-family: "inter" sans-serif;
+  font-size: 9pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@mixin stilius_h4 {
+  color: rgb(0, 0, 0);
+  font-family: "inter" sans-serif;
+  font-size: 24pt;
+  padding-left: 20px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+@mixin input {
+  border: 3px solid rgb(255, 73, 105);
+  background-color: transparent;
+  border-radius: 35px;
+  padding: 15px 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+@mixin stilius_a {
+  text-decoration: none;
+  padding: 5px;
+  color: rgb(70, 69, 69);
+  font-family: "inter" sans-serif;
+  font-size: 12pt;
 }
 
 header {
-  margin: 15px;
+  margin: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,41 +60,33 @@ header {
 }
 
 div.part1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
 
   div.part1-text {
+    width: 60%;
     h5 {
-      color: rgb(255, 107, 177);
-      padding-left: 20px;
-      font-family: "Futara" sans-serif;
+      @include stilius_h5();
     }
 
     h4 {
-      color: rgb(0, 0, 0);
-      font-family: "Futara" sans-serif;
-      font-weight: bold;
-      font-size: 22pt;
-      padding-left: 20px;
-      line-height: 30px;
-      margin: 0;
+      @include stilius_h4();
     }
 
     p {
       @include stilius_p();
     }
   }
+
+  div.part1-8 {
+    width: 40%;
+  }
+
   div.part1-8 img {
-    width: 250px;
-    float: left;
+    width: 300px;
   }
 
   input {
-    border: 3px solid pink;
-    background-color: transparent;
-    border-radius: 35px;
-    padding: 15px 40px;
-    margin: 15px;
+    @include input();
   }
 }
 
@@ -73,31 +94,24 @@ div.part2 {
   background-image: url("background.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 15px;
 
   h4 {
+    @include stilius_h4();
+    font-weight: lighter;
     width: 300px;
-    color: rgb(0, 0, 0);
-    font-size: 22pt;
-    font-family: "Futara" sans-serif;
-    padding-top: 80px;
-    padding-left: 20px;
-    margin: 0;
-    line-height: 30px;
+    padding-top: 70px;
   }
 
   p {
+    @include stilius_p();
     width: 300px;
     color: rgb(0, 0, 0);
-    font-size: 15pt;
-    font-family: "Futara" sans-serif;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    line-height: 30px;
   }
 }
 
 div.part3-logo {
+  max-width: 800px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -115,25 +129,55 @@ div.part3-logo {
 
 div.part4-pic {
   h4 {
+    @include stilius_h4();
+    font-weight: lighter;
     width: 300px;
-    color: rgb(0, 0, 0);
-    font-size: 22pt;
-    font-family: "Futara" sans-serif;
-    padding-top: 80px;
-    padding-left: 20px;
-    margin: 0;
-    line-height: 30px;
+    padding-top: 40px;
   }
 
   p {
+    @include stilius_p();
     width: 300px;
-    color: rgb(0, 0, 0);
-    font-size: 14pt;
-    font-family: "Futara" sans-serif;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    line-height: 30px;
+  }
+}
+
+div.pictures {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  > .nft {
+    margin: 20px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 16px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .line1 .gloop {
+    color: rgb(255, 128, 57);
+    margin: 10px 0;
+  }
+
+  .line1 .bid,
+  .line3 p {
+    color: rgb(119, 119, 119);
+    margin: 10px 0;
+  }
+
+  .line2 p {
+    font-size: 16pt;
+    margin: 10px 0;
+  }
+
+  p img {
+    padding-right: 5px;
   }
 }
 
@@ -142,18 +186,13 @@ div.part5 {
   grid-template-columns: repeat(2, 1fr);
 
   h5 {
-    color: rgb(255, 107, 177);
-    padding-left: 20px;
+    @include stilius_h5();
+    padding-top: 70px;
   }
 
   h4 {
+    @include stilius_h4();
     width: 200px;
-    color: rgb(0, 0, 0);
-    font-size: 30pt;
-    font-family: "Futara" sans-serif;
-    padding-left: 20px;
-    margin: 0;
-    line-height: 30px;
   }
 
   p {
@@ -161,21 +200,19 @@ div.part5 {
   }
 
   input {
-    border: 3px solid pink;
-    background-color: transparent;
-    border-radius: 35px;
-    padding: 15px 40px;
-    margin: 15px;
+    @include input();
   }
 
   img {
-    width: 150px;
+    width: 130px;
     padding: 40px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
 footer {
+  margin-left: 20px;
+
   .footer-right {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -188,4 +225,116 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  a,
+  i,
+  h2 {
+    @include stilius_a();
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    margin: 20px;
+  }
+
+//   header {
+//     margin: 20px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//   nav a {
+//     flex-direction: row;
+//     color: rgb(196, 196, 196);
+//   }
+
+//   nav img {
+//     display: none;
+//   }
+// }
+
+div.part1 {
+  div.part1-text {
+    width: 50%;
+
+    p {
+      @include stilius_p();
+      width: 470px;
+    }
+  }
+
+  div.part1-8 {
+    width: 50%;
+  }
+}
+
+div.part2 {
+  h4 {
+    width: 500px;
+  }
+
+  p {
+    width: 500px;
+  }
+}
+
+div.part3-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  img:nth-child(4) {
+  display:flex;
+  }
+
+  img {
+    width: 110px;
+    padding: 20px;
+  }
+}
+
+// div.part4-pic {
+//   h4 {
+//     @include stilius_h4();
+//     font-weight: lighter;
+//     width: 300px;
+//     padding-top: 40px;
+//   }
+
+//   p {
+//     @include stilius_p();
+//     width: 300px;
+//   }
+}
+
+div.part5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  h5 {
+    @include stilius_h5();
+    padding-top: 70px;
+  }
+
+  h4 {
+    @include stilius_h4();
+    width: 200px;
+  }
+
+  p {
+    @include stilius_p();
+  }
+
+  input {
+    @include input();
+  }
+
+  img {
+    width: 130px;
+    padding: 40px;
+    margin-top: 30px;
+  }
+}
+
 }
