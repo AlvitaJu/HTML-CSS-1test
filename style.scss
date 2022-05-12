@@ -1,90 +1,191 @@
-header {
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    nav a {
-        display: none;
-        color: rgb(196, 196, 196);
-    }
-
-    nav img {
-        width: 30px;
-    }
+@mixin stilius_p {
+  color: rgb(70, 69, 69);
+  font-family: "Futara" sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  line-height: 25px;
+  padding-left: 20px;
 }
 
-div.part1{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
+@mixin stilius_h5 {
+  color: rgb(255, 107, 177);
+  padding-left: 20px;
+  font-family: "Futara" sans-serif;
+  font-size: 22pt;
+}
 
-    div.part1-text{
-        h5{
-            color:rgb(255, 107, 177);
-            padding-left: 20px;
-        }
+header {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-        h4{
-            color:rgb(0,0,0);
-            font-family: 'Futara' sans-serif;
-            font-weight: bold;
-            font-size: 22pt;
-            padding-left: 20px;
-            line-height: 30px;
-            margin:0;
-        }
+  nav a {
+    display: none;
+    color: rgb(196, 196, 196);
+  }
 
-        p{
-            font-family: 'Futara' sans-serif;
-            font-weight:lighter;
-            font-size: 15pt;
-            padding-left: 20px;
-            line-height: 30px;
-            color:rgb(170, 170, 170);
-         }
+  nav img {
+    width: 30px;
+  }
+}
 
+div.part1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  div.part1-text {
+    h5 {
+      color: rgb(255, 107, 177);
+      padding-left: 20px;
+      font-family: "Futara" sans-serif;
     }
-    div.part1-8 img{
-        width: 250px;
-        float: left;
+
+    h4 {
+      color: rgb(0, 0, 0);
+      font-family: "Futara" sans-serif;
+      font-weight: bold;
+      font-size: 22pt;
+      padding-left: 20px;
+      line-height: 30px;
+      margin: 0;
     }
 
-    input{
-       border: 3px solid pink; 
-       background-color: transparent;
-       border-radius: 35px;
-       padding: 15px 40px;
-       margin:15px;
-
+    p {
+      @include stilius_p();
     }
+  }
+  div.part1-8 img {
+    width: 250px;
+    float: left;
+  }
+
+  input {
+    border: 3px solid pink;
+    background-color: transparent;
+    border-radius: 35px;
+    padding: 15px 40px;
+    margin: 15px;
+  }
 }
 
 div.part2 {
   background-image: url("background.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  
 
   h4 {
     width: 300px;
-    color:rgb(0,0,0);
+    color: rgb(0, 0, 0);
     font-size: 22pt;
-    font-family: 'Futara' sans-serif;
+    font-family: "Futara" sans-serif;
     padding-top: 80px;
     padding-left: 20px;
-    margin:0;
+    margin: 0;
     line-height: 30px;
   }
 
-  p{
+  p {
     width: 300px;
-    color:rgb(0,0,0);
+    color: rgb(0, 0, 0);
     font-size: 15pt;
-    font-family: 'Futara' sans-serif;
+    font-family: "Futara" sans-serif;
     padding-top: 5px;
     padding-left: 20px;
     padding-bottom: 20px;
     line-height: 30px;
+  }
+}
 
+div.part3-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+
+  img:nth-child(4) {
+    display: none;
+  }
+
+  img {
+    width: 120px;
+    padding: 20px;
+  }
+}
+
+div.part4-pic {
+  h4 {
+    width: 300px;
+    color: rgb(0, 0, 0);
+    font-size: 22pt;
+    font-family: "Futara" sans-serif;
+    padding-top: 80px;
+    padding-left: 20px;
+    margin: 0;
+    line-height: 30px;
+  }
+
+  p {
+    width: 300px;
+    color: rgb(0, 0, 0);
+    font-size: 14pt;
+    font-family: "Futara" sans-serif;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+  }
+}
+
+div.part5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  h5 {
+    color: rgb(255, 107, 177);
+    padding-left: 20px;
+  }
+
+  h4 {
+    width: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 30pt;
+    font-family: "Futara" sans-serif;
+    padding-left: 20px;
+    margin: 0;
+    line-height: 30px;
+  }
+
+  p {
+    @include stilius_p();
+  }
+
+  input {
+    border: 3px solid pink;
+    background-color: transparent;
+    border-radius: 35px;
+    padding: 15px 40px;
+    margin: 15px;
+  }
+
+  img {
+    width: 150px;
+    padding: 40px;
+    margin-top: 40px;
+  }
+}
+
+footer {
+  .footer-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about,
+  .NFT,
+  .contact,
+  .Social {
+    display: flex;
+    flex-direction: column;
   }
 }
