@@ -250,21 +250,21 @@ div.part5 img {
   margin-top: 110px;
 }
 
-footer {
+div.part6 {
   margin-left: 20px;
 }
 
-footer .footer-right {
+div.part6 .footer-right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
 
-footer .about,
-footer .NFT,
-footer .contact,
-footer .Social {
+div.part6 .about,
+div.part6 .NFT,
+div.part6 .contact,
+div.part6 .Social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,10 +274,10 @@ footer .Social {
           flex-direction: column;
 }
 
-footer a,
-footer i,
-footer h2,
-footer h3 {
+div.part6 a,
+div.part6 i,
+div.part6 h2,
+div.part6 h3 {
   text-decoration: none;
   padding: 5px;
   color: #777777;
@@ -285,7 +285,8 @@ footer h3 {
   font-size: 12pt;
 }
 
-.footer {
+footer {
+  margin-left: 20px;
   color: #777777;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,13 +297,41 @@ footer h3 {
   padding: 30px 0;
 }
 
-.footer #none {
+footer #none {
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
   html {
     margin: 20px;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header nav a {
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-decoration: none;
+    color: #464545;
+    font-family: "inter" sans-serif;
+  }
+  header #pink {
+    color: #ff6bb1;
+  }
+  header nav img {
+    display: none;
   }
   div.part1 div.part1-text {
     width: 50%;
@@ -356,11 +385,35 @@ footer h3 {
     padding: 40px;
     margin-top: 30px;
   }
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  .part6 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-right {
+    width: 30%;
+  }
+  .footer-right {
+    width: 70%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+  }
+  footer {
+    color: #777777;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 30px 0;
+  }
+  footer #none {
+    display: inline;
+  }
 }
 /*# sourceMappingURL=style.css.map */
