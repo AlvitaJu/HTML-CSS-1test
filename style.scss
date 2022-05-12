@@ -1,90 +1,366 @@
-header {
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    nav a {
-        display: none;
-        color: rgb(196, 196, 196);
-    }
-
-    nav img {
-        width: 30px;
-    }
+@mixin stilius_p {
+  color: rgb(70, 69, 69);
+  font-family: "inter" sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  line-height: 1.2;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
-div.part1{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
+@mixin stilius_h5 {
+  color: rgb(255, 107, 177);
+  padding-left: 20px;
+  font-family: "inter" sans-serif;
+  font-size: 9pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
 
-    div.part1-text{
-        h5{
-            color:rgb(255, 107, 177);
-            padding-left: 20px;
-        }
+@mixin stilius_h4 {
+  color: rgb(0, 0, 0);
+  font-family: "inter" sans-serif;
+  font-size: 24pt;
+  padding-left: 20px;
+  line-height: 1.1;
+  margin: 0;
+}
 
-        h4{
-            color:rgb(0,0,0);
-            font-family: 'Futara' sans-serif;
-            font-weight: bold;
-            font-size: 22pt;
-            padding-left: 20px;
-            line-height: 30px;
-            margin:0;
-        }
+@mixin input {
+  border: 3px solid rgb(255, 73, 105);
+  background-color: transparent;
+  border-radius: 35px;
+  padding: 15px 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
 
-        p{
-            font-family: 'Futara' sans-serif;
-            font-weight:lighter;
-            font-size: 15pt;
-            padding-left: 20px;
-            line-height: 30px;
-            color:rgb(170, 170, 170);
-         }
+@mixin stilius_a {
+  text-decoration: none;
+  padding: 5px;
+  color: rgb(119, 119, 119);
+  font-family: "inter" sans-serif;
+  font-size: 12pt;
+}
 
+header {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav a {
+    display: none;
+  }
+
+  nav img {
+    width: 30px;
+  }
+}
+
+div.part1 {
+  display: flex;
+
+  div.part1-text {
+    width: 60%;
+    h5 {
+      @include stilius_h5();
     }
-    div.part1-8 img{
-        width: 250px;
-        float: left;
+
+    h4 {
+      @include stilius_h4();
     }
 
-    input{
-       border: 3px solid pink; 
-       background-color: transparent;
-       border-radius: 35px;
-       padding: 15px 40px;
-       margin:15px;
-
+    p {
+      @include stilius_p();
     }
+  }
+
+  div.part1-8 {
+    width: 40%;
+  }
+
+  div.part1-8 img {
+    width: 300px;
+  }
+
+  input {
+    @include input();
+  }
 }
 
 div.part2 {
   background-image: url("background.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+  border-radius: 15px;
 
   h4 {
+    @include stilius_h4();
+    font-weight: lighter;
     width: 300px;
-    color:rgb(0,0,0);
-    font-size: 22pt;
-    font-family: 'Futara' sans-serif;
-    padding-top: 80px;
-    padding-left: 20px;
-    margin:0;
-    line-height: 30px;
+    padding-top: 70px;
   }
 
-  p{
+  p {
+    @include stilius_p();
     width: 300px;
-    color:rgb(0,0,0);
-    font-size: 15pt;
-    font-family: 'Futara' sans-serif;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    line-height: 30px;
+    color: rgb(0, 0, 0);
+  }
+}
 
+div.part3-logo {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+
+  img:nth-child(4) {
+    display: none;
+  }
+
+  img {
+    width: 120px;
+    padding: 20px;
+  }
+}
+
+div.part4-pic {
+  h4 {
+    @include stilius_h4();
+    font-weight: lighter;
+    width: 300px;
+    padding-top: 40px;
+  }
+
+  p {
+    @include stilius_p();
+    width: 300px;
+  }
+}
+
+div.pictures {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  > .nft {
+    width: 290px;
+    margin: 20px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 16px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .line1 .gloop {
+    color: rgb(255, 128, 57);
+    font-size: 12pt;
+  }
+
+  .line1 .bid,
+  .line3 p {
+    color: rgb(119, 119, 119);
+    font-size: 12pt;
+  }
+
+  // .line3:first-child {
+  //   // text-align: left;
+  // }
+
+  .line2 p {
+    font-size: 16pt;
+  }
+
+  p img {
+    padding-right: 2px;
+  }
+}
+
+div.part5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  h5 {
+    @include stilius_h5();
+    padding-top: 70px;
+  }
+
+  h4 {
+    @include stilius_h4();
+    width: 170px;
+  }
+
+  p {
+    @include stilius_p();
+  }
+
+  input {
+    @include input();
+  }
+
+  img {
+    width: 150px;
+    padding: 40px;
+    margin-top: 110px;
+  }
+}
+
+div.part6 {
+  margin-left: 20px;
+
+  .footer-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about,
+  .NFT,
+  .contact,
+  .Social {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a,
+  i,
+  h2,
+  h3 {
+    @include stilius_a();
+  }
+}
+
+footer {
+  margin-left: 20px;
+  color: rgb(119, 119, 119);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  #none {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    margin: 20px;
+  }
+
+  header {
+    nav {
+      display: flex;
+      flex-direction: row;
+    }
+
+    nav a {
+      padding: 30px;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      color: rgb(70, 69, 69);
+      font-family: "inter" sans-serif;
+    }
+
+    #pink {
+      color: rgb(255, 107, 177);
+    }
+
+    nav img {
+      display: none;
+    }
+  }
+
+  div.part1 {
+    div.part1-text {
+      width: 50%;
+
+      p {
+        @include stilius_p();
+        width: 470px;
+      }
+    }
+
+    div.part1-8 {
+      width: 50%;
+    }
+  }
+
+  div.part2 {
+    h4 {
+      width: 500px;
+    }
+
+    p {
+      width: 500px;
+    }
+  }
+
+  div.part3-logo {
+    display: flex;
+    justify-content: space-between;
+
+    img:nth-child(4) {
+      display: flex;
+    }
+  }
+
+  div.part4-pic {
+    h4 {
+      width: 600px;
+    }
+
+    p {
+      width: 800px;
+    }
+  }
+
+  div.part5 {
+    h4 {
+      width: 700px;
+    }
+
+    p {
+      width: 600px;
+    }
+    img {
+      width: 130px;
+      padding: 40px;
+      margin-top: 30px;
+    }
+  }
+
+  .part6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-right {
+    width: 30%;
+  }
+
+  .footer-right {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: column;
+  }
+
+  footer {
+    color: rgb(119, 119, 119);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    padding-right: 30px;
+
+    #none {
+      display: inline;
+    }
   }
 }
